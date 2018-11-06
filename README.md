@@ -22,8 +22,8 @@ in the project root. The pipeline stages are the following:
   > stage('Results') - has the junit reports that can also be accessed from jenkins by clicking
   build number and *Test Result* link.
 
->Notes:
+Notes:
 
 > 1) The pipeline assumes that Maven named as 'M3' (Maven tool) must be configured
 in global tool configuration and maven home is defined.  
-> 2) https://gist.githubusercontent.com/frnkdny/6ce32d992ec6576548e29312e08fb28b/raw/37252020df292befa7eb99a64d63111cc85da49e/test.log is consumed by the test itself and by executing the test, it is implicitly consumed.
+> 2) The gist for test log - *frnkdny/6ce32d992ec6576548e29312e08fb28b/raw/37252020df292befa7eb99a64d63111cc85da49e/test.log* is consumed by the test itself and by executing the test, it is implicitly consumed.
