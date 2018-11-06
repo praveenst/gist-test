@@ -8,10 +8,10 @@ node {
       // **       in the global configuration.           
       mvnHome = tool 'M3'
    }
-   stage('Build') {
+   stage('Test') {
       // Run the maven build
       if (isUnix()) {
-         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package test"
+         sh "'${mvnHome}/bin/mvn' clean package test"
       } else {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package test/)
       }
