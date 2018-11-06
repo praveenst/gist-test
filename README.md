@@ -15,15 +15,15 @@ Jenkins  pipeline has been created to execute the job and the *Jenkinsfile* is a
 in the project root. The pipeline stages are the following:
 
   * **Preparation**
+  > stage('Preparation')  - sets up maven and git repository parameters to pull the sources
   * **Test**
+  > stage('Test') - builds and tests the source code from github.
   * **Results**
+  > stage('Results') - has the junit reports that can also be accessed from jenkins by clicking
+  build number and *Test Result* link.
 
-Note that the pipeline assumes that Maven named as 'M3' (Maven tool) must be configured
+>Notes:
+
+> 1) The pipeline assumes that Maven named as 'M3' (Maven tool) must be configured
 in global tool configuration and maven home is defined.  
-
-> stage('Preparation')  - sets up maven and git repository parameters to pull the sources
-> stage('Test') - builds and tests the source code from github.
-> stage('Results') - has the junit reports that can also be accessed from jenkins by clicking
-build number and *Test Result* link.
-
-> NOTE: https://gist.githubusercontent.com/frnkdny/6ce32d992ec6576548e29312e08fb28b/raw/37252020df292befa7eb99a64d63111cc85da49e/test.log is comsumed by the test itself and by executing the test, it is implicitly consumed. 
+> 2) https://gist.githubusercontent.com/frnkdny/6ce32d992ec6576548e29312e08fb28b/raw/37252020df292befa7eb99a64d63111cc85da49e/test.log is consumed by the test itself and by executing the test, it is implicitly consumed.
